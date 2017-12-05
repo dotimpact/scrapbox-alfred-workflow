@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>cc.doppac.workflows.scrapbox.search</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>13C0AE95-38AE-402F-9183-F58F20C71D6D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>920E6A95-44F0-48AE-ADD7-7958D0ED1CA5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>dotimpact</string>
+	<key>description</key>
+	<string>Scrapbox Search</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>scrapbox</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://scrapbox.io/dotimpact/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>920E6A95-44F0-48AE-ADD7-7958D0ED1CA5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sb</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>TEXT=`$gohome/bin/scrapbox list --token $token $site '{query}'`
+
+IFS=$'\n'
+LINES=($TEXT)
+for line in ${LINES[@]}
+do
+  ITEM='&lt;item uid="scrapbox search" arg="'$line'"&gt;&lt;title&gt;'$line'&lt;/title&gt;&lt;subtitle&gt;&lt;/subtitle&gt;&lt;icon&gt;icon.png&lt;/icon&gt;
+ &lt;/item&gt;'
+  ITEMS=$ITEMS$ITEM
+done
+
+echo '&lt;?xml version="1.0"?&gt;&lt;items&gt;
+  '$ITEMS'
+&lt;/items&gt;'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>scrapbox search</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>13C0AE95-38AE-402F-9183-F58F20C71D6D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>13C0AE95-38AE-402F-9183-F58F20C71D6D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>920E6A95-44F0-48AE-ADD7-7958D0ED1CA5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>590</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>gohome</key>
+		<string>/Users/doppac/go</string>
+		<key>site</key>
+		<string>dotimpact</string>
+		<key>token</key>
+		<string>s%3AWi-D-v6Ua_Gj10GqLpE3EaMN6EwelzJt.Fjbk7ur3f0C3OEET%2Bq2Q9bGoG1cEXfpx8X8G%2FplSSWs</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>token</string>
+		<string>site</string>
+		<string>gohome</string>
+	</array>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string>http://doppac.cc</string>
+</dict>
+</plist>
