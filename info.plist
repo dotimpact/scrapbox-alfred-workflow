@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>932879F6-6AD7-4672-AE9A-C1BB61CB3E37</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3366EBAE-DB5E-483A-92A7-EC1A215DFB27</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>dotimpact</string>
@@ -40,7 +53,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://scrapbox.io/dotimpact/{query}</string>
+				<string>https://scrapbox.io/{var:site}/{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -111,6 +124,46 @@ echo '&lt;?xml version="1.0"?&gt;&lt;items&gt;
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>sb:new</string>
+				<key>subtext</key>
+				<string>arg: title</string>
+				<key>text</key>
+				<string>create new page</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>932879F6-6AD7-4672-AE9A-C1BB61CB3E37</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://scrapbox.io/{var:site}/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>3366EBAE-DB5E-483A-92A7-EC1A215DFB27</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -123,12 +176,26 @@ echo '&lt;?xml version="1.0"?&gt;&lt;items&gt;
 			<key>ypos</key>
 			<integer>180</integer>
 		</dict>
+		<key>3366EBAE-DB5E-483A-92A7-EC1A215DFB27</key>
+		<dict>
+			<key>xpos</key>
+			<integer>590</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
 		<key>920E6A95-44F0-48AE-ADD7-7958D0ED1CA5</key>
 		<dict>
 			<key>xpos</key>
 			<integer>590</integer>
 			<key>ypos</key>
 			<integer>180</integer>
+		</dict>
+		<key>932879F6-6AD7-4672-AE9A-C1BB61CB3E37</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>330</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
