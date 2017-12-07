@@ -1,7 +1,7 @@
 # scrapbox-alfred-workflow
 scrapbox alfred workflow
 
-depend on [scrapbox go cli](https://github.com/ohtomi/scrapbox)
+depends on [scrapbox go cli](https://github.com/ohtomi/scrapbox)
 
 ![workflow screencast](https://i.gyazo.com/6a5b23660e0d2964f65b7ed29a0d33bb.gif)
 
